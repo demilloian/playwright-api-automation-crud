@@ -119,11 +119,12 @@ Expected:
 
 
 ```
-screenshots/
-├── allure-overview.png
-├── allure-steps.png
-├── playwright-report.png
-├── terminal-run.png
+## Screenshots
+
+![Allure Overview](./screenshots/allure-overview.png)
+![Allure Steps](./screenshots/allure-steps.png)
+![Playwright Report](./screenshots/playwright-report.png)
+![Terminal Run](./screenshots/terminal-run.png)
 ```
 
 ---
