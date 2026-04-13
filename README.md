@@ -2,54 +2,72 @@
 
 ## Overview
 
-API automation project using Playwright and TypeScript.  
-Covers full CRUD (Create, Read, Update, Delete) flow using:
+API automation project using Playwright and TypeScript.
+Implements a full CRUD (Create, Read, Update, Delete) workflow using:
 
 https://restful-booker.herokuapp.com
+
+This project demonstrates API testing, reusable helper functions, and proper validation practices.
 
 ---
 
 ## Tech Stack
 
-- Playwright
-- TypeScript
-- Allure Report
+* Playwright
+* TypeScript
+* Allure Report
 
 ---
 
 ## Project Structure
 
+```
 playwright-booking-api/
-├── data/
+├── test-data/
+│   ├── auth.json
+│   ├── booking.json
+│   ├── putBooking.json
+│   └── patchBookingData.json
+│
 ├── utils/
+│   ├── apiHelpers.ts
+│   └── allureHelpers.ts
+│
 ├── tests/
+│   └── booking/
+│       ├── booking-crud-e2e.spec.ts
+│       └── booking-negative.spec.ts
+│
 ├── playwright.config.ts
+├── package.json
+```
 
 ---
 
 ## Setup
 
+```bash
 npm install
 npx playwright install
 npm install -D allure-playwright allure-commandline
+```
 
 ---
 
 ## Run Tests
 
+```bash
 npx playwright test
+```
 
 ---
 
 ## Reports
 
+```bash
 npx playwright show-report
-<img width="1111" height="387" alt="image" src="https://github.com/user-attachments/assets/f83c763d-556b-4b9a-8a18-5cc8c5479c53" />
-
 npx allure serve allure-results
-<img width="1583" height="854" alt="image" src="https://github.com/user-attachments/assets/6eefbdfb-3211-4a2e-9ff9-f6629aae91d4" />
-<img width="1590" height="857" alt="image" src="https://github.com/user-attachments/assets/7d5448bb-f9e1-4570-96cf-bb6567322f32" />
-<img width="1592" height="857" alt="image" src="https://github.com/user-attachments/assets/bd9ad65e-4029-47a3-adcf-a5b89f4c2249" />
+```
 
 ---
 
@@ -65,9 +83,48 @@ npx allure serve allure-results
 
 ---
 
+## Validation Covered
+
+* Status code validation
+* Response body validation
+* Nested JSON validation
+* Updated vs unchanged fields (PATCH)
+* Delete verification using GET (404)
+
+---
+
 ## Negative Test
 
-Update without token → 403 Forbidden
+Update booking without token
+
+Expected:
+
+* 403 Forbidden
+
+---
+
+## Design Approach
+
+* Uses `payload` for reusable API functions
+* Avoids hardcoded test data
+* Separates:
+
+  * API logic (helpers)
+  * test logic (spec files)
+  * test data (JSON)
+
+---
+
+## Screenshots
+
+
+```
+screenshots/
+├── allure-overview.png
+├── allure-steps.png
+├── playwright-report.png
+├── terminal-run.png
+```
 
 ---
 
