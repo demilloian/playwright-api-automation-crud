@@ -1,17 +1,29 @@
 {
   "name": "playwright-booking-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright API automation framework for CRUD testing with TypeScript and Allure reporting.",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:crud": "npx playwright test tests/booking/booking-crud-e2e.spec.ts",
+    "test:negative": "npx playwright test tests/booking/booking-negative.spec.ts",
+    "report": "npx playwright show-report",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report"
+  },
+  "keywords": [
+    "playwright",
+    "api-testing",
+    "typescript",
+    "qa-automation",
+    "allure"
+  ],
+  "author": "Ian Demillo",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0",
-    "allure-commandline": "^2.38.1",
-    "allure-playwright": "^3.7.1"
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.1"
   }
 }
