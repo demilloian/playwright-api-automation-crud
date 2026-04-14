@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 
-import booking from '../test-data/booking.json';
-import putBooking from '../test-data/putBooking.json';
+import booking from '../../test-data/booking.json';
+import putBooking from '../../test-data/putBooking.json';
 
-import { createBooking } from '../utils/apiHelpers';
+import { createBooking } from '../../utils/apiHelpers';
 
 test('Update booking without token should fail', async ({ request }) => {
   const createBody = await createBooking(request, booking);

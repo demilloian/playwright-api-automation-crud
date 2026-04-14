@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 import * as allure from 'allure-js-commons';
 
-import booking from '../test-data/booking.json';
-import putBooking from '../test-data/putBooking.json';
-import patchBookingData from '../test-data/patchBookingData.json';
+import booking from '../../test-data/booking.json';
+import putBooking from '../../test-data/putBooking.json';
+import patchBookingData from '../../test-data/patchBookingData.json';
 
 import {
   createBooking,
@@ -12,9 +12,9 @@ import {
   updateBooking,
   patchBooking,
   deleteBooking
-} from '../utils/apiHelpers';
+} from '../../utils/apiHelpers';
 
-import { attachJson, attachText } from '../utils/allureHelpers';
+import { attachJson, attachText } from '../../utils/allureHelpers';
 
 
 test('Booking CRUD E2E flow', async ({ request }) => {

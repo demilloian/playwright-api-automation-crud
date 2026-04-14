@@ -1,4 +1,7 @@
 # Playwright API Automation – Booking CRUD
+![CI](https://github.com/demilloian/playwright-api-automation-crud/actions/workflows/playwright.yml/badge.svg)
+
+End-to-end API automation framework using Playwright with CI integration and Allure reporting
 
 ## Overview
 
@@ -11,11 +14,27 @@ This project demonstrates API testing, reusable helper functions, and proper val
 
 ---
 
+## Why This Project Matters
+
+This project demonstrates my hands-on skills in:
+
+- API automation using Playwright
+- TypeScript-based test design
+- reusable helper functions
+- positive and negative test coverage
+- report generation with Allure
+- CI execution using GitHub Actions
+
+It simulates a real-world API CRUD workflow with validation at each step.
+
+---
+
 ## Tech Stack
 
 * Playwright
 * TypeScript
 * Allure Report
+* GitHub Actions (CI)
 
 ---
 
@@ -103,24 +122,41 @@ Expected:
 
 ---
 
-## Design Approach
+## Framework Design
 
-* Uses `payload` for reusable API functions
-* Avoids hardcoded test data
-* Separates:
+This framework is designed to be scalable, maintainable, and reusable for real-world API testing scenarios.
 
-  * API logic (helpers)
-  * test logic (spec files)
-  * test data (JSON)
+- Uses reusable API helper functions to avoid duplication
+- Separates test data, test logic, and API logic
+- Keeps test cases clean and focused on validation
+- Makes it easy to extend for additional endpoints
+
+---
+
+## CI Pipeline
+
+This project uses GitHub Actions to automatically run Playwright tests on every push.
+
+Pipeline steps:
+- Install dependencies
+- Install Playwright browsers
+- Execute tests
+- Upload HTML report
+
+This ensures that all test cases are validated automatically and continuously.
 
 ---
 
 ## Screenshots
 
-![Allure Overview](./screenshots/allure-overview.png)
-![Allure Steps](./screenshots/allure-steps.png)
-![Playwright Report](./screenshots/playwright-report.png)
-![Terminal Run](./screenshots/terminal-run.png)
+
+```
+screenshots/
+├── allure-overview.png
+├── allure-steps.png
+├── playwright-report.png
+├── terminal-run.png
+```
 
 ---
 
