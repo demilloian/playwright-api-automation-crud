@@ -149,14 +149,17 @@ This ensures that all test cases are validated automatically and continuously.
 
 ## Screenshots
 
+### Playwright Report
+![Playwright Report](./screenshots/playwright-report.png)
 
-```
-screenshots/
-├── allure-overview.png
-├── allure-steps.png
-├── playwright-report.png
-├── terminal-run.png
-```
+### Allure Overview
+![Allure Overview](./screenshots/allure-overview.png)
+
+### Allure Steps
+![Allure Steps](./screenshots/allure-steps.png)
+
+### Terminal Run
+![Terminal Run](./screenshots/terminal-run.png)
 
 ---
 
