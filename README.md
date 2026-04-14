@@ -163,6 +163,16 @@ This ensures that all test cases are validated automatically and continuously.
 
 ---
 
+## Future Improvements
+
+- Add schema validation
+- Add more negative test cases
+- Add data-driven testing
+- Add environment variable support
+- Add CI badge and test status badge
+- Add more edge case validations
+
+---
 ## Author
 
 Ian Demillo
